@@ -1,20 +1,16 @@
 package ru.inurgallimov.configuration.kotlin;
 
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 
 import javax.sql.DataSource;
 
 @Getter
+@RequiredArgsConstructor
 public class KotlinSQLiteConnector {
+
     private final String login;
     private final String password;
     private final DataSource ds;
 
-    @Autowired
-    public KotlinSQLiteConnector(String login, String password, DataSource ds) {
-        this.login = login;
-        this.password = password;
-        this.ds = ds;
-    }
 }
